@@ -305,7 +305,7 @@ function gen_config_server(node)
 	local settings = nil
 	local routing = nil
 	local outbounds = {
-		{protocol = "freedom", tag = "direct"}, {protocol = "blackhole", tag = "blocked"}
+		{protocol = "freedom", tag = "direct"}, {protocol = "blackhole", tag = "blocked", settings = {response = {type = "http"}}}
 	}
 
 	if node.protocol == "vmess" or node.protocol == "vless" then
