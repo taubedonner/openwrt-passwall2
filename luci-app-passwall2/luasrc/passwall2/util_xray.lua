@@ -1596,7 +1596,12 @@ function gen_config(var)
 
 		local blackhole_outbound = {
 			protocol = "blackhole",
-			tag = "blackhole"
+			tag = "blackhole",
+			settings = {
+				response = {
+					type = "http"
+				}
+			}
 		}
 		if COMMON.default_outbound_tag == "blackhole" then
 			table.insert(outbounds, 1, blackhole_outbound)
